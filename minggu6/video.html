@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="./index.html">Home</a><a href="./contact.html">Contact</a
+      ><a href="./video.html">Video</a>
+    </nav>
+    <h2>Belajar Multimedia di HTML</h2>
+    <button id="check">Check duration</button>
+    <p id="duration"></p>
+    <br />
+    <div class="player">
+      <video id="myVideo">
+        <source src="./movie.mp4" type="video/mp4" />
+      </video>
+      <div class="controls">
+        <button id="toggle">►</button>
+      </div>
+    </div>
+    <script>
+      const vid = document.querySelector("#myVideo");
+      const check = document.querySelector("#check");
+
+      check.addEventListener("click", () => {
+        const text = document.querySelector("#duration");
+        const minute = parseInt(vid.duration / 60, 10);
+        const seconds = Math.floor(vid.duration % 60);
+        text.innerHTML = minute + " menit " + seconds + " detik";
+      });
+
+      const toggle = document.querySelector("#toggle");
+
+      toggle.addEventListener("click", () => {
+        if (vid.paused) {
+          vid.play();
+          toggle.innerHTML = "▌▌";
+        } else {
+          vid.pause();
+          toggle.innerHTML = "►";
+        }
+      });
+    </script>
+    <footer>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#09375e"
+          fill-opacity="1"
+          d="M0,128L24,117.3C48,107,96,85,144,101.3C192,117,240,171,288,202.7C336,235,384,245,432,229.3C480,213,528,171,576,149.3C624,128,672,128,720,149.3C768,171,816,213,864,213.3C912,213,960,171,1008,176C1056,181,1104,235,1152,261.3C1200,288,1248,288,1296,261.3C1344,235,1392,181,1416,154.7L1440,128L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"
+        ></path>
+      </svg>
+      <div class="footer">Copyright &copy; 2022 Rico Muhammad Nashrullah</div>
+    </footer>
+  </body>
+</html>
