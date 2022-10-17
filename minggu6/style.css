@@ -167,3 +167,26 @@ button:hover {
   background: #04213a;
   transform: scale(110%);
 }
+.news-body {
+  display: flex;
+  flex-direction: row;
+  padding: 5em;
+  gap: 5em;
+}
+.news-list {
+  width: 75%;
+}
+
+.faq-item {
+  margin-bottom: 3em;
+}
+.faq-question {
+  width: 100%;
+}
+.faq-answer {
+  background-color: #cacaca;
+  padding: 2em;
+}
+.faq-closed {
+  display: none;
+}

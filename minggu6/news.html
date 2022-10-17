@@ -4,11 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Video</title>
+    <title>News</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="./icon.png" type="image/x-icon" />
+    <style></style>
   </head>
   <body>
+    <header class="news-header">
+      <h1>News</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+        laudantium.
+      </p>
+    </header>
     <nav>
       <a href="./index.html">Home</a>
       <a href="./contact.html">Contact</a><a href="./video.html">Video</a>
@@ -16,41 +24,27 @@
       <a href="./faqs.html">Faqs</a>
     </nav>
 
-    <h2>Belajar Multimedia di HTML</h2>
-    <button id="check">Check duration</button>
-    <p id="duration"></p>
-    <br />
-    <div class="player">
-      <video id="myVideo">
-        <source src="./movie.mp4" type="video/mp4" />
-      </video>
-      <div class="controls">
-        <button id="toggle">►</button>
+    <div class="news-body">
+      <div class="news-list">
+        <article>
+          <h3>Lorem, ipsum dolor.</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+            accusantium perspiciatis error! Nesciunt, est natus quam pariatur
+            sint aut aliquam! <a href="#">Read More...</a>
+          </p>
+        </article>
+      </div>
+      <div class="news-archive">
+        <ul>
+          <li><a href="#">Lorem, ipsum dolor.</a></li>
+          <li><a href="#">Omnis, harum ea.</a></li>
+          <li><a href="#">Non, ipsa corrupti?</a></li>
+          <li><a href="#">Voluptatum, minima esse.</a></li>
+        </ul>
       </div>
     </div>
-    <script>
-      const vid = document.querySelector("#myVideo");
-      const check = document.querySelector("#check");
 
-      check.addEventListener("click", () => {
-        const text = document.querySelector("#duration");
-        const minute = parseInt(vid.duration / 60, 10);
-        const seconds = Math.floor(vid.duration % 60);
-        text.innerHTML = minute + " menit " + seconds + " detik";
-      });
-
-      const toggle = document.querySelector("#toggle");
-
-      toggle.addEventListener("click", () => {
-        if (vid.paused) {
-          vid.play();
-          toggle.innerHTML = "▌▌";
-        } else {
-          vid.pause();
-          toggle.innerHTML = "►";
-        }
-      });
-    </script>
     <footer>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
