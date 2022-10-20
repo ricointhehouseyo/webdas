@@ -7,8 +7,16 @@
     <title>Video</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="./icon.png" type="image/x-icon" />
+    <style>
+      main {
+        margin: 5em;
+      }
+    </style>
   </head>
   <body>
+    <header>
+      <h1>Belajar Multimedia di HTML</h1>
+    </header>
     <nav>
       <a href="./index.html">Home</a>
       <a href="./contact.html">Contact</a><a href="./video.html">Video</a>
@@ -16,18 +24,19 @@
       <a href="./faqs.html">Faqs</a>
     </nav>
 
-    <h2>Belajar Multimedia di HTML</h2>
-    <button id="check">Check duration</button>
-    <p id="duration"></p>
-    <br />
-    <div class="player">
-      <video id="myVideo">
-        <source src="./movie.mp4" type="video/mp4" />
-      </video>
-      <div class="controls">
-        <button id="toggle">►</button>
+    <main>
+      <button id="check">Check duration</button>
+      <p id="duration"></p>
+      <br />
+      <div class="player">
+        <video id="myVideo">
+          <source src="./movie.mp4" type="video/mp4" />
+        </video>
+        <div class="controls">
+          <button id="toggle">►</button>
+        </div>
       </div>
-    </div>
+    </main>
     <script>
       const vid = document.querySelector("#myVideo");
       const check = document.querySelector("#check");
