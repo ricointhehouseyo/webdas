@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample CSS</title>
+
+    <style>
+      header nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em 4em;
+      }
+      header nav ul li {
+        list-style-type: none;
+        float: left;
+      }
+      header nav ul li a {
+        padding: 0.5em 1em;
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+      header nav ul li a:hover {
+        font-size: larger;
+      }
+      main {
+        padding: 1em 4em;
+        display: flex;
+        justify-content: space-between;
+      }
+      section {
+        width: 70%;
+        margin-right: 1em;
+        background-color: #cecece;
+        box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.8);
+        border-radius: 2em;
+        padding: 2em;
+      }
+      .comment {
+        background-color: #fff;
+        padding: 1em;
+        margin: 1em 0em;
+        border-radius: 1em;
+      }
+      .comment-head .username {
+        font-weight: bold;
+        margin-right: 1em;
+      }
+      .comment-head .comment-date {
+        color: #777777;
+      }
+      footer {
+        text-align: center;
+        font-weight: bold;
+        font-style: 24px;
+        margin: 4em 2em;
+      }
+      aside {
+        padding: 2em;
+        background-color: #ece;
+        box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.8);
+        border-radius: 2em;
+      }
+      .like-button {
+        background-color: #fff;
+        outline: none;
+        border: none;
+        padding: 0.5em 1em;
+        border-radius: 1em;
+        font-size: 18px;
+        margin-bottom: 1em;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        transition: all 0.3s;
+      }
+      .like-button:hover {
+        background-color: #d7d8ff;
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Websiteku</h1>
+        <ul>
+          <li><a href="#">Lorem</a></li>
+          <li><a href="#">Consequatur</a></li>
+          <li><a href="#">Eos</a></li>
+          <li><a href="#">Odit</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <article>
+          <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+            incidunt laudantium unde rerum, nulla mollitia. Sint quod odio
+            mollitia explicabo vitae aut recusandae, enim doloribus consectetur
+            maxime officiis accusantium sed.
+          </p>
+          <p>
+            Porro quos dolor eveniet voluptate sed cumque assumenda error,
+            consequatur illum autem quasi, doloribus maiores magni praesentium,
+            sit in voluptatem quaerat modi provident quas vero! Ipsa rerum
+            quaerat est itaque!
+          </p>
+          <p>
+            Iusto ratione harum itaque illo nobis obcaecati magni veniam quas
+            veritatis totam atque soluta, ducimus maxime porro perspiciatis,
+            ipsum, reiciendis optio laborum quia ea inventore fugiat sit. Dicta,
+            laboriosam ut?
+          </p>
+          <p>
+            Inventore odit alias fuga et totam. Porro cupiditate hic totam odio
+            mollitia facere quae a similique nemo quo eaque qui ipsam harum
+            libero doloremque, et voluptatum beatae molestias illo eligendi?
+          </p>
+          <p>
+            Blanditiis animi quisquam error aut odit maxime unde praesentium
+            necessitatibus accusamus, dolore atque laborum commodi id libero
+            incidunt esse perspiciatis a sit minima aspernatur adipisci ipsum
+            eaque? Deserunt, quis praesentium.
+          </p>
+        </article>
+        <div>
+          <button class="like-button">
+            <span class="thumbsup">👍</span
+            ><span class="like-indicator">120.3k</span>
+          </button>
+        </div>
+        <hr />
+        <div class="comments">
+          <h2>Comments</h2>
+          <div class="comment">
+            <div class="comment-head">
+              <span class="username">Anonym45</span
+              ><span class="comment-date">24/2/2022</span>
+            </div>
+            <p class="comment-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+              voluptatibus maiores, accusantium quis minima, cum delectus
+              deleniti magnam error, molestias veniam molestiae voluptatem at!
+              Laboriosam provident cumque impedit libero deserunt ducimus
+              dolore?
+            </p>
+          </div>
+          <div class="comment">
+            <div class="comment-head">
+              <span class="username">Brobrogore</span
+              ><span class="comment-date">25/2/2022</span>
+            </div>
+            <p class="comment-content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+              ullam expedita minima magnam quod odio laudantium delectus alias
+              sint! Ad animi commodi tenetur excepturi quis doloribus amet ab
+              voluptas voluptatum?
+            </p>
+          </div>
+        </div>
+      </section>
+      <aside>
+        <h2>Archieve</h2>
+        <ul>
+          <li>Lorem ipsum dolor sit.</li>
+          <li>Ut dolore quis possimus!</li>
+          <li>Dolorem fugiat et tempore!</li>
+          <li>Voluptatem repudiandae magni cupiditate!</li>
+          <li>Voluptas totam voluptatibus nulla.</li>
+          <li>Veniam quibusdam accusamus maiores.</li>
+          <li>Doloremque numquam corrupti soluta.</li>
+          <li>Aperiam cumque libero ratione.</li>
+          <li>Deserunt assumenda odio est.</li>
+          <li>Vero architecto aspernatur quis?</li>
+        </ul>
+      </aside>
+    </main>
+    <footer>Copyright &copy; 2022 Rico</footer>
+  </body>
+</html>
