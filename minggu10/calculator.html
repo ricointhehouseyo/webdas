@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+<body>
+    <form action="#" id="form" name="form">
+        <label for="bil1">Bilangan 1</label>
+        <input type="number" name="bil1" id="bil1" placeholder="Bilangan 1">
+        <br>
+        <label for="opr">Operator</label>
+        <select name="opr" id="opr">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <br>
+        <label for="bil2">Bilangan 2</label>
+        <input type="number" name="bil2" id="bil2" placeholder="Bilangan 2">
+        <br>
+        <button type="submit">=</button>
+        <input type="number" name="hasil" id="hasil" disabled>
+    </form>
+    <script>
+        document.form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const values = {
+                bil1: e.srcElement[0].value,
+                opr: e.srcElement[1].value,
+                bil2: e.srcElement[2].value
+            }
+            form.hasil.value = eval(`${values.bil1} ${values.opr} ${values.bil2}`);
+        });
+    </script>
+</body>
+</html>
