@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS</title>
+    <style>
+      /* body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        } */
+      form {
+        display: flex;
+        /* flex-direction: column; */
+        /* gap: 2em; */
+      }
+      input {
+        padding: 0.5em 1em;
+        font-size: 12pt;
+        border-radius: 0.5em;
+        border: 1px solid gray;
+      }
+      button {
+        padding: 0.5em 1em;
+        font-size: 12pt;
+        border-radius: 0.5em;
+        border: none;
+        background-color: #a29bff;
+        cursor: pointer;
+        transition: 200ms;
+      }
+      button:hover {
+        background-color: #827af3;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" id="form">
+      <input
+        type="text"
+        name="nama"
+        id="nama"
+        placeholder="Masukkan nama mahasiswa"
+      />
+      <button type="submit">Tambah</button>
+    </form>
+    <div id="counter"></div>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Daftar Nama</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="daftar">
+        <!-- Dinamis -->
+      </tbody>
+    </table>
+    <script>
+      const nama = [];
+      const form = document.getElementById("form");
+      const daftar = document.getElementById("daftar");
+      const counter = document.getElementById("counter");
+      const refresh = () => {
+        let inner = "";
+        nama.forEach((item, index) => {
+          inner += `<tr><td>${
+            index + 1
+          }</td><td>${item}</td><td><button onclick="hapus(${index})">Hapus</button><button onclick="edit(${index})">Edit</button></td></tr>`;
+        });
+        daftar.innerHTML = inner;
+        counter.innerHTML = nama.length;
+      };
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        nama.push(form.nama.value);
+        form.nama.value = "";
+        refresh();
+      });
+      const hapus = (index) => {
+        nama.splice(index, 1);
+        refresh();
+      };
+      const edit = (index) => {
+        nama[index] = prompt("Edit nama mahasiswa", nama[index]);
+        refresh();
+      };
+    </script>
+  </body>
+</html>
